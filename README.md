@@ -33,8 +33,8 @@ In modern industrial settings, robots must respond to human commands in real-tim
 
 To rigorously benchmark model performance on datasets such as MPI-INF-3DHP (annot3), strict data pre-processing and evaluation protocols are established:
   
-  3.1.  Skeleton Topology Mapping: A dictionary mapping function aligns varying joint definitions (e.g., COCO 17-joint detectors vs. MPI-INF-3DHP 28-joint ground truths) to ensure consistent index-wise loss computation.
+Skeleton Topology Mapping: A dictionary mapping function aligns varying joint definitions (e.g., COCO 17-joint detectors vs. MPI-INF-3DHP 28-joint ground truths) to ensure consistent index-wise loss computation.
   
-  3.2.  Protocol 1 (Root-Relative MPJPE): Both predicted and ground-truth 3D skeletons are normalized by subtracting their respective pelvis (Root) coordinates, zero-centering the pelvis at $(0,0,0)$ to eliminate global translation bias.
+Protocol 1 (Root-Relative MPJPE): Both predicted and ground-truth 3D skeletons are normalized by subtracting their respective pelvis (Root) coordinates, zero-centering the pelvis at $(0,0,0)$ to eliminate global translation bias.
   
-  3.3.  Protocol 2 (P-MPJPE / Procrustes Alignment): Applies Procrustes Analysis (optimal rigid scaling, rotation, and translation) to align predicted poses with ground truth, evaluating pure pose structure regardless of body proportions or camera perspective.
+Protocol 2 (P-MPJPE / Procrustes Alignment): Applies Procrustes Analysis (optimal rigid scaling, rotation, and translation) to align predicted poses with ground truth, evaluating pure pose structure regardless of body proportions or camera perspective.
