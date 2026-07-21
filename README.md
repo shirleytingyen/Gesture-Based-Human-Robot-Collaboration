@@ -26,8 +26,8 @@ In modern industrial settings, robots must respond to human commands in real-tim
   Robustness against Scale Variation: Normalizing 3D vectors before dot-product calculation decouples pure rotational pose from predicted bone-length inaccuracies.$\Delta\theta/\Delta t$
   Command Triggers: Uses angular velocities to activate velocity commands in ROS 2.
 
-  2.3. Downstream Robotics Integration (PyBullet)Direct Angle Control (FK over IK): 
-  Instead of feeding estimated 3D coordinates into Inverse Kinematics (IK)—which often fails due to fluctuating limb lengths—the calculated 3D joint angles are mapped directly to PyBullet joint position motors (setJointMotorControl2), preventing joint jitter and out-of-reach solver errors.
+   2.3. Downstream Robotics Integration (PyBullet)Direct Angle Control (FK over IK):
+   Instead of feeding estimated 3D coordinates into Inverse Kinematics (IK)—which often fails due to fluctuating limb lengths—the calculated 3D joint angles are mapped directly to PyBullet joint position motors (setJointMotorControl2), preventing joint jitter and out-of-reach solver errors.
   
   3. Evaluation Protocols & Data Alignment
 
