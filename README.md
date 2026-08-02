@@ -9,7 +9,7 @@ In modern industrial environments, robots are expected to respond to human comma
   
 # Model Architecture & Evaluation
 
-### 2.1 Temporal 3D Skeletal Lifting (Dilated Temporal CNN)
+### Temporal 3D Skeletal Lifting (Dilated Temporal CNN)
 
 The proposed Dilated Temporal Convolutional Network (DTCN) lifts 2D keypoint sequences into 3D poses. Given 2D video sequences or keypoint annotations from the **MPI-INF-3DHP** dataset, the network maps $2J$ input channels (`NUM_JOINTS * 2`) to $3J$ output channels (`NUM_JOINTS * 3`) through three 1D convolutional layers—incorporating Batch Normalization, ReLU, Dropout, and a dilated convolution ($d=2$)—followed by Adaptive Average Pooling and a fully connected layer.
 
@@ -24,7 +24,7 @@ To ensure rigorous training and evaluation on **MPI-INF-3DHP**:
 
 Optimization is performed via the Adam optimizer, with a StepLR schedule decaying the learning rate by $\gamma = 0.5$ every 20 epochs.
 
-### 2.2 View-Invariant Feature Extraction Using Joint Angles
+### View-Invariant Feature Extraction Using Joint Angles
 
 Once the 3D joint coordinates are predicted by the DTCN model, they are converted into joint-angle features to obtain a view-invariant representation. Rather than relying solely on absolute Cartesian coordinates, the method computes the interior angle between adjacent limb segments. For example, the elbow angle is calculated from the shoulder ($\mathbf{P}_s$), elbow ($\mathbf{P}_e$), and wrist ($\mathbf{P}_w$) as:
 
