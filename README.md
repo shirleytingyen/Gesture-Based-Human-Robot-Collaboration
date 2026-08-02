@@ -37,4 +37,6 @@ By normalizing the limb vectors before computing the dot product, the resulting 
 
 The extracted joint-angle representation is used to control a differential-drive mobile robot in the PyBullet simulation environment. The simulator is initialized with a fixed physics time step of 1/240 s, and a Racecar robot model is loaded from the PyBullet URDF library. The estimated joint angles and their temporal variations are mapped to predefined robot motion commands, enabling real-time gesture-driven navigation. The simulation provides an efficient and safe platform for evaluating the proposed human–robot interaction framework.
 
+![demo](your_video.gif)<img width="800" height="533" alt="dtcn_racecar_demo2-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/ded2cdfa-035b-4129-9888-a5e949ebef99" />
+
 ---
