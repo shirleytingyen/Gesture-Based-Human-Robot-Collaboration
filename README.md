@@ -1,19 +1,12 @@
-Title: A View-Invariant Framework using 3D Skeletal Joint-Angle Dynamics
+# Abstract
 
-Abstract:
+This research proposes a robust human-robot collaboration (HRC) framework that enables intuitive robot control via vision. The core objective is to translate dynamic human gestures captured from a moving robot's perspective into actionable commands. By leveraging a Dilated Temporal Convolutional Network, this project uplifts 2D keypoint sequences into 3D skeletal structures. To overcome perspective distortion and camera ego-motion, I introduce Joint-Angle Deltas as a view-invariant feature. Grounded in biological joint kinematics rather than unstable pixel coordinates, this framework delivers a scalable and reliable interface for smart manufacturing environments.
 
-This research proposes a robust human-robot collaboration (HRC) framework that enables intuitive robot control via vision. The core objective is to translate dynamic human gestures captured from a moving robot's perspective into actionable commands. By leveraging a Dilated Temporal Convolutional Network with Residual Connections (ResDTCN), this project uplifts 2D keypoint sequences into 3D skeletal structures. To overcome perspective distortion and camera ego-motion, we introduce Joint-Angle Deltas as a view-invariant feature. Grounded in biological joint kinematics rather than unstable pixel coordinates, this framework delivers a scalable and reliable interface for smart manufacturing environments.
+# Motivation
 
-1. Motivation
-
-In modern industrial settings, robots must respond to human commands in real-time. However, traditional vision systems face several bottlenecks:  
-  Limitations of 2D Perception: Standard 2D gesture recognition is highly sensitive to the distance between the human and the robot, often failing when scale changes.  
-
-  Perspective Instability: In an egocentric setup, the robot's own movement introduces significant noise into the visual stream. A unified 3D representation is required to decouple human motion from camera motion.  
+In modern industrial environments, robots are expected to respond to human commands in real time, making robust vision-based interaction increasingly important. However, traditional vision systems face several key challenges. First, conventional 2D gesture recognition is highly sensitive to the distance between the human and the robot, leading to significant performance degradation under scale variations. Second, in egocentric robotic setups, the robot's own motion introduces substantial perspective changes and visual noise, making it difficult to distinguish human motion from camera motion. A unified 3D representation is therefore essential to achieve viewpoint-invariant perception. Finally, replacing traditional interfaces such as tablets or fixed control panels with gesture-based interaction enables more intuitive and flexible robot operation. To support reliable human–robot collaboration, the system must accurately differentiate intentional command gestures from natural, unintended human movements.  
   
-  The Need for Intuitive Interaction: Moving away from heavy tablets or fixed consoles, gesture-based control allows operators to direct robots "on the fly". This requires high-fidelity recognition that can distinguish between accidental movements and intentional commands.  
-  
-2. Methodology & Model Optimization
+# Methodology & Model Optimization
 
    2.1. Temporal 3D Skeletal Lifting (ResDTCN Architecture)The primary computational backbone processes 2D keypoint sequences $(N \times \text{Joints} \times 2)$ extracted from monocular camera streams (or dataset annotations like annot2):
    Residual Temporal Blocks: Replaces sequential 1D convolutions with Residual Blocks (ResNet-style shortcuts) to mitigate gradient vanishing and capture deep spatio-temporal features.
