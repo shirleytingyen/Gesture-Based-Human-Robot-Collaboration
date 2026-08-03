@@ -1,3 +1,5 @@
+
+https://github.com/user-attachments/assets/6a106d59-4af6-4c66-bed3-ccb5f69b8d9a
 # Abstract
 
 This research proposes a robust human-robot collaboration (HRC) framework that enables intuitive robot control via vision. The core objective is to translate dynamic human gestures captured from a moving robot's perspective into actionable commands. By leveraging a Dilated Temporal Convolutional Network, this project uplifts 2D keypoint sequences into 3D skeletal structures. To overcome perspective distortion and camera ego-motion, I introduce Joint-Angle Deltas as a view-invariant feature. Grounded in biological joint kinematics rather than unstable pixel coordinates, this framework delivers a scalable and reliable interface for smart manufacturing environments.
@@ -37,6 +39,6 @@ By normalizing the limb vectors before computing the dot product, the resulting 
 
 The extracted joint-angle representation is used to control a differential-drive mobile robot in the PyBullet simulation environment. The simulator is initialized with a fixed physics time step of 1/240 s, and a Racecar robot model is loaded from the PyBullet URDF library. The estimated joint angles and their temporal variations are mapped to predefined robot motion commands, enabling real-time gesture-driven navigation. The simulation provides an efficient and safe platform for evaluating the proposed human–robot interaction framework.
 
-![demo](your_video.gif)<img width="800" height="533" alt="dtcn_racecar_demo2-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/ded2cdfa-035b-4129-9888-a5e949ebef99" />
+![demo](your_video.gif)<img width="800" height="533" alt="ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/614ddb03-9274-4a68-a566-83cfa275b697" />
 
 ---
