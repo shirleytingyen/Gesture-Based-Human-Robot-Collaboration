@@ -56,7 +56,7 @@ You can download the dataset directly from the official repository:
 After downloading, extract the archive and place the contents into the `data/mpi_inf_3dhp/` directory as follows:
 
 ```text
-Skeleton-Guided-Text-Generation/
+Gesture-Based-Human-Robot-Collaboration/
 ├── data/
 │   └── mpi_inf_3dhp/
 │       ├── S1/
