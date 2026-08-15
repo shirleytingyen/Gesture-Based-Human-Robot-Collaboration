@@ -43,12 +43,25 @@ The extracted joint-angle representation is used to control a differential-drive
 
 ## 📥 Dataset Setup
 
-This project utilizes the **MPI-INF-3DHP 3D Human Pose Dataset**. By default, the provided setup script downloads **Subject 1 (S1)** for quick testing and lightweight experiments, but it can be easily configured or extended to include other subjects (S2–S8).
+This project utilizes the **MPI-INF-3DHP 3D Human Pose Dataset**. By default, this project uses **Subject 1 (S1)** for experiments, but it can be easily extended to include other subjects (S2–S8).
 
-### Downloading the Dataset
+### Manual Download
 
-Run the following command in your terminal or Google Colab notebook to download the default subject data:
+You can download the dataset directly from the official repository:
 
-```bash
-# Execute the automated download script (downloads S1 by default)
-./download_data.sh
+* **Official Dataset Link**: [MPI-INF-3DHP 3D Human Pose Dataset](https://vcai.mpi-inf.mpg.de/3dhp-dataset/)
+
+### Directory Structure
+
+After downloading, extract the archive and place the contents into the `data/mpi_inf_3dhp/` directory as follows:
+
+```text
+Skeleton-Guided-Text-Generation/
+├── data/
+│   └── mpi_inf_3dhp/
+│       ├── S1/
+│       │   ├── Seq1/
+│       │   └── ...
+│       └── ...
+├── download_data.sh (optional)
+└── ...
