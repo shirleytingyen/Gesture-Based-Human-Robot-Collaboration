@@ -41,25 +41,14 @@ The extracted joint-angle representation is used to control a differential-drive
 
 ---
 
-## 💾 Dataset Setup
+## 📥 Dataset Setup
 
-This project uses the **KTH Dataset Complete** from Kaggle. Follow the steps below to set up your Kaggle API credentials and download the dataset automatically using the provided script.
-
-### Prerequisites: Kaggle API Token
-
-1. Go to your [Kaggle Account Settings](https://www.kaggle.com/settings).
-2. Scroll down to the **API** section and click **Create New API Token**. This will download a `kaggle.json` file.
-3. Upload or place `kaggle.json` in your current working directory.
+This project utilizes the **MPI-INF-3DHP 3D Human Pose Dataset**. By default, the provided setup script downloads **Subject 1 (S1)** for quick testing and lightweight experiments, but it can be easily configured or extended to include other subjects (S2–S8).
 
 ### Downloading the Dataset
 
-Run the following commands in your terminal or Google Colab notebook:
+Run the following command in your terminal or Google Colab notebook to download the default subject data:
 
 ```bash
-# Set up Kaggle credentials
-mkdir -p ~/.kaggle
-cp kaggle.json ~/.kaggle/
-chmod 600 ~/.kaggle/kaggle.json
-
-# Execute the automated download script
+# Execute the automated download script (downloads S1 by default)
 ./download_data.sh
