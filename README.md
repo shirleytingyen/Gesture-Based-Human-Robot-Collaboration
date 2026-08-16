@@ -1,5 +1,4 @@
-# 3D Human Pose Estimation and Real-Time Gesture-Controlled Simulation
-
+# Vision-Based Human-Robot Interaction via 3D Pose Estimation
 This repository contains the implementation of a 3D human pose estimation pipeline using a Dilated Temporal Convolutional Network (DTCN). The model lifts sequence-level 2D keypoint trajectories extracted from the MPI-INF-3DHP dataset into root-relative 3D joint locations and translates right-arm elbow motion into real-time motor control commands within a PyBullet physics environment.
 
 ---
