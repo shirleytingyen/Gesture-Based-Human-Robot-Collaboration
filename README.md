@@ -1,13 +1,19 @@
-# Abstract
+# 3D Human Pose Estimation and Real-Time Gesture-Controlled Simulation
+
+This repository contains the implementation of a 3D human pose estimation pipeline using a Dilated Temporal Convolutional Network (DTCN). The model lifts sequence-level 2D keypoint trajectories extracted from the MPI-INF-3DHP dataset into root-relative 3D joint locations and translates right-arm elbow motion into real-time motor control commands within a PyBullet physics environment.
+
+---
+
+## Abstract
 
 This research proposes a robust human-robot collaboration (HRC) framework that enables intuitive robot control via vision. The core objective is to translate dynamic human gestures captured from a moving robot's perspective into actionable commands. By leveraging a Dilated Temporal Convolutional Network, this project uplifts 2D keypoint sequences into 3D skeletal structures. To overcome perspective distortion and camera ego-motion, I introduce Joint-Angle Deltas as a view-invariant feature. Grounded in biological joint kinematics rather than unstable pixel coordinates, this framework delivers a scalable and reliable interface for smart manufacturing environments.
 
-# Motivation
+## Motivation
 
 In modern industrial environments, robots are expected to respond to human commands in real time, making robust vision-based interaction increasingly important. However, traditional vision systems face several key challenges. First, conventional 2D gesture recognition is highly sensitive to the distance between the human and the robot, leading to significant performance degradation under scale variations. Second, in egocentric robotic setups, the robot's own motion introduces substantial perspective changes and visual noise, making it difficult to distinguish human motion from camera motion. A unified 3D representation is therefore essential to achieve viewpoint-invariant perception. Finally, replacing traditional interfaces such as tablets or fixed control panels with gesture-based interaction enables more intuitive and flexible robot operation. To support reliable human–robot collaboration, the system must accurately differentiate intentional command gestures from natural, unintended human movements.  
 
   
-# Model Architecture & Evaluation
+## Model Architecture & Evaluation
 
 ### Temporal 3D Skeletal Lifting (Dilated Temporal CNN)
 
@@ -33,7 +39,7 @@ $$\theta = \arccos \left( \frac{(\mathbf{P}_e - \mathbf{P}_s) \cdot (\mathbf{P}_
 By normalizing the limb vectors before computing the dot product, the resulting joint angles become invariant to body scale and less sensitive to bone-length estimation errors. Consequently, the extracted joint-angle features provide a more robust representation under viewpoint variations than raw 3D coordinates.
 
 
-# Robot Control in the PyBullet Simulation Environment
+## Robot Control in the PyBullet Simulation Environment
 
 The extracted joint-angle representation is used to control a differential-drive mobile robot in the PyBullet simulation environment. The simulator is initialized with a fixed physics time step of 1/240 s, and a Racecar robot model is loaded from the PyBullet URDF library. The estimated joint angles and their temporal variations are mapped to predefined robot motion commands, enabling real-time gesture-driven navigation. The simulation provides an efficient and safe platform for evaluating the proposed human–robot interaction framework.
 
